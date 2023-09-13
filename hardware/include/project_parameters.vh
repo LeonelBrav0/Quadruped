@@ -1,0 +1,7 @@
+// OV7670 SRAM  
+`define HW_BLK_MEM_GEN_0_AWIDTH     32
+`define HW_BLK_MEM_GEN_0_DWIDTH     32
+`define HW_BLK_MEM_GEN_0_WE_WIDTH   4
+
+// OV7670 DEV
+`define HW_OV7670_DWIDTH            8

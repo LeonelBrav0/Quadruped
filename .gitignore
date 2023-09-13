@@ -1,0 +1,15 @@
+*.vscode
+
+*hardware/fpga/petalinux/build
+*hardware/fpga/petalinux/components
+*hardware/fpga/petalinux/images/linux/*
+*hardware/fpga/petalinux/pre-built/linux/*
+*hardware/fpga/petalinux/.Xil
+*hardware/fpga/petalinux/*.jou
+*hardware/fpga/petalinux/*.log
+
+*hardware/fpga/vivado/project/Project_Q.cache/*
+*hardware/fpga/vivado/project/Project_Q.runs/*
+*hardware/fpga/vivado/project/Project_Q.sim/*
+
+*hardware/fpga/deploy/build/Project_Q/*

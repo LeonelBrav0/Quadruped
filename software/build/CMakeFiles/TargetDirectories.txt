@@ -1,0 +1,2 @@
+/home/use/Projects/quadruped/software/build/CMakeFiles/send.dir
+/home/use/Projects/quadruped/software/build/CMakeFiles/quadruped.dir

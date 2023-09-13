@@ -1,0 +1,13 @@
+vhdl xil_defaultlib  \
+"../../../bd/Project_Q/ip/Project_Q_proc_sys_reset_0_0/sim/Project_Q_proc_sys_reset_0_0.vhd" \
+"../../../bd/Project_Q/ip/Project_Q_proc_sys_reset_1_0/sim/Project_Q_proc_sys_reset_1_0.vhd" \
+"../../../bd/Project_Q/ip/Project_Q_axi_intc_0_0/sim/Project_Q_axi_intc_0_0.vhd" \
+"../../../bd/Project_Q/ip/Project_Q_axi_gpio_0_0/sim/Project_Q_axi_gpio_0_0.vhd" \
+"../../../bd/Project_Q/ip/Project_Q_axi_gpio_0_1/sim/Project_Q_axi_gpio_0_1.vhd" \
+"../../../bd/Project_Q/ip/Project_Q_axi_gpio_0_2/sim/Project_Q_axi_gpio_0_2.vhd" \
+"../../../bd/Project_Q/ip/Project_Q_axi_gpio_0_4/sim/Project_Q_axi_gpio_0_4.vhd" \
+"../../../bd/Project_Q/ip/Project_Q_axi_iic_0_0/sim/Project_Q_axi_iic_0_0.vhd" \
+"../../../bd/Project_Q/ip/Project_Q_axi_uartlite_0_0/sim/Project_Q_axi_uartlite_0_0.vhd" \
+"../../../bd/Project_Q/ip/Project_Q_proc_sys_reset_2_0/sim/Project_Q_proc_sys_reset_2_0.vhd" \
+
+nosort

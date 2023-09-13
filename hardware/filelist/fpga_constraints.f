@@ -1,0 +1,1 @@
+../fpga/constraints/kria_kr260.xdc

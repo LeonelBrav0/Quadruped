@@ -1,0 +1,14 @@
+verilog xil_defaultlib --include "/home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xilinx_vip/include" --include "../../../../Project_Q.gen/sources_1/bd/Project_Q/ipshared/ec67/hdl" --include "../../../../Project_Q.gen/sources_1/bd/Project_Q/ipshared/abef/hdl" --include "../../../../Project_Q.gen/sources_1/bd/Project_Q/ipshared/7698" \
+"../../../bd/Project_Q/ip/Project_Q_xlslice_0_0/sim/Project_Q_xlslice_0_0.v" \
+"../../../bd/Project_Q/ip/Project_Q_zynq_ultra_ps_e_0_0/sim/Project_Q_zynq_ultra_ps_e_0_0_vip_wrapper.v" \
+"../../../bd/Project_Q/ip/Project_Q_clk_wiz_0_0/Project_Q_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/Project_Q/ip/Project_Q_clk_wiz_0_0/Project_Q_clk_wiz_0_0.v" \
+"../../../bd/Project_Q/sim/Project_Q.v" \
+"../../../bd/Project_Q/ip/Project_Q_xbar_1/sim/Project_Q_xbar_1.v" \
+"../../../bd/Project_Q/ip/Project_Q_auto_pc_1/sim/Project_Q_auto_pc_1.v" \
+"../../../bd/Project_Q/ip/Project_Q_auto_cc_1/sim/Project_Q_auto_cc_1.v" \
+"../../../bd/Project_Q/ip/Project_Q_auto_cc_2/sim/Project_Q_auto_cc_2.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

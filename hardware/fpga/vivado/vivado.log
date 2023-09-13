@@ -1,0 +1,1230 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Sep  6 20:59:30 2023
+# Process ID: 34590
+# Current directory: /home/use/Projects/quadruped/hardware/fpga/vivado
+# Command line: vivado -mode batch -notrace -source /home/use/Projects/quadruped/hardware/fpga/scripts/vivado_main.tcl -tclargs -jobs 8 -proj_name Project_Q
+# Log file: /home/use/Projects/quadruped/hardware/fpga/vivado/vivado.log
+# Journal file: /home/use/Projects/quadruped/hardware/fpga/vivado/vivado.jou
+# Running On: ubuntu, OS: Linux, CPU Frequency: 3187.202 MHz, CPU Physical cores: 8, Host memory: 16755 MB
+#-----------------------------------------------------------
+source /home/use/Projects/quadruped/hardware/fpga/scripts/vivado_main.tcl -notrace
+WARNING: [Board 49-91] Board repository path '../../vivado_board_repo/kr260_carrier/1.0' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path '../../vivado_board_repo/kr260_som/1.0' does not exist, it will not be used to search board files.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/ip'.
+Wrote  : </home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/sources_1/bd/Project_Q/Project_Q.bd> 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+INFO: [PSU-1]  DP_AUDIO clock source: RPLL is also being used by other peripheral clocks. Their outputs may get impacted if any driver changes DP_AUDIO PLL source to support runtime audio change 
+Wrote  : </home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/sources_1/bd/Project_Q/Project_Q.bd> 
+INFO: [BD 41-1662] The design 'Project_Q.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : /home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/synth/Project_Q.v
+Verilog Output written to : /home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/sim/Project_Q.v
+Verilog Output written to : /home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/hdl/Project_Q_wrapper.v
+INFO: [Project 1-1716] Could not find the wrapper file ./project/Project_Q.srcs/sources_1/bd/Project_Q/hdl/Project_Q_wrapper.v, checking in project .gen location instead.
+INFO: [Vivado 12-12391] Found file ./project/Project_Q.gen/sources_1/bd/Project_Q/hdl/Project_Q_wrapper.v, importing it to Project
+INFO: [BD 5-320] Validate design is not run, since the design is already validated.
+INFO: [BD 41-1662] The design 'Project_Q.bd' is already validated. Therefore parameter propagation will not be re-run.
+Verilog Output written to : /home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/synth/Project_Q.v
+Verilog Output written to : /home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/sim/Project_Q.v
+Verilog Output written to : /home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/hdl/Project_Q_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlslice_0 .
+INFO: [xilinx.com:ip:zynq_ultra_ps_e:3.4-0] Project_Q_zynq_ultra_ps_e_0_0: 
+Changes in your design (including the PCW configuration settings) are not automatically exported from Vivado to Xilinx's SDK, Petalinux or Yocto.
+This is by design to avoid disrupting existing embedded development efforts. To have any changes of your design taking effect in the embedded software flow please export your
+design by going through Vivado's main menu, click on File, then Export finally select Export Hardware, please ensure you click on the Include BitStream option.
+The auto-generated HDF file is all you need to import in Xilinx's SDK, Petalinux or Yocto for your changes to be reflected in the Embedded Software Flow.
+For more information, please consult PG201, section: Exporting PCW Settings to Embedded Software Flows
+INFO: [PSU-0] Address Range of DDR (0x7ff00000 to 0x7fffffff) is reserved by PMU for internal purpose.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+Exporting to file /home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/hw_handoff/Project_Q.hwh
+Generated Hardware Definition File /home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/synth/Project_Q.hwdef
+generate_target: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1896.570 ; gain = 78.969 ; free physical = 10658 ; free virtual = 14337
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: Project_Q_zynq_ultra_ps_e_0_0
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Wed Sep  6 20:59:59 2023] Launched Project_Q_zynq_ultra_ps_e_0_0_synth_1...
+Run output will be captured here: /home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.runs/Project_Q_zynq_ultra_ps_e_0_0_synth_1/runme.log
+[Wed Sep  6 20:59:59 2023] Launched synth_1...
+Run output will be captured here: /home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.runs/synth_1/runme.log
+[Wed Sep  6 20:59:59 2023] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log Project_Q_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Project_Q_wrapper.tcl
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source Project_Q_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/ip'.
+Command: synth_design -top Project_Q_wrapper -part xck26-sfvc784-2LVI-i
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LVI-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 35195
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2590.449 ; gain = 237.797 ; free physical = 8713 ; free virtual = 12592
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1993.154; parent = 1783.486; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3578.168; parent = 2590.453; children = 987.715
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Project_Q_wrapper' [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/sources_1/imports/hdl/Project_Q_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'Project_Q' [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/synth/Project_Q.v:12]
+INFO: [Synth 8-6157] synthesizing module 'Project_Q_xlslice_0_0' [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/ip/Project_Q_xlslice_0_0/synth/Project_Q_xlslice_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (0#1) [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'Project_Q_xlslice_0_0' (0#1) [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/ip/Project_Q_xlslice_0_0/synth/Project_Q_xlslice_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'Project_Q_zynq_ultra_ps_e_0_0' [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.runs/synth_1/.Xil/Vivado-35105-ubuntu/realtime/Project_Q_zynq_ultra_ps_e_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Project_Q_zynq_ultra_ps_e_0_0' (0#1) [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.runs/synth_1/.Xil/Vivado-35105-ubuntu/realtime/Project_Q_zynq_ultra_ps_e_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'pl_resetn0' of module 'Project_Q_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/synth/Project_Q.v:24]
+WARNING: [Synth 8-7071] port 'pl_resetn1' of module 'Project_Q_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/synth/Project_Q.v:24]
+WARNING: [Synth 8-7071] port 'pl_resetn2' of module 'Project_Q_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/synth/Project_Q.v:24]
+WARNING: [Synth 8-7071] port 'pl_resetn3' of module 'Project_Q_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/synth/Project_Q.v:24]
+WARNING: [Synth 8-7071] port 'pl_clk0' of module 'Project_Q_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/synth/Project_Q.v:24]
+WARNING: [Synth 8-7071] port 'pl_clk1' of module 'Project_Q_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/synth/Project_Q.v:24]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'Project_Q_zynq_ultra_ps_e_0_0' has 8 connections declared, but only 2 given [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/synth/Project_Q.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Project_Q' (0#1) [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/synth/Project_Q.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'Project_Q_wrapper' (0#1) [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/sources_1/imports/hdl/Project_Q_wrapper.v:12]
+WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2663.418 ; gain = 310.766 ; free physical = 8796 ; free virtual = 12675
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1993.154; parent = 1783.486; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3651.137; parent = 2663.422; children = 987.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2681.230 ; gain = 328.578 ; free physical = 8800 ; free virtual = 12679
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1993.154; parent = 1783.486; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3668.949; parent = 2681.234; children = 987.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2681.230 ; gain = 328.578 ; free physical = 8800 ; free virtual = 12679
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1993.154; parent = 1783.486; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3668.949; parent = 2681.234; children = 987.715
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2681.230 ; gain = 0.000 ; free physical = 8793 ; free virtual = 12672
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/ip/Project_Q_zynq_ultra_ps_e_0_0/Project_Q_zynq_ultra_ps_e_0_0/Project_Q_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'Project_Q_i/zynq_ultra_ps_e_0'
+Finished Parsing XDC File [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/ip/Project_Q_zynq_ultra_ps_e_0_0/Project_Q_zynq_ultra_ps_e_0_0/Project_Q_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'Project_Q_i/zynq_ultra_ps_e_0'
+Parsing XDC File [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:19]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:58]
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:67]
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:68]
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:73]
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:74]
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:76]
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:77]
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:80]
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:81]
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:83]
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:84]
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:86]
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:87]
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:89]
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:90]
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:93]
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:94]
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:96]
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:97]
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:99]
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:100]
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:102]
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:103]
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:106]
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:107]
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:109]
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:110]
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:112]
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:113]
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:115]
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:116]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:121]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:122]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:124]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:125]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:127]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:128]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:130]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:131]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:133]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:134]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:136]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:137]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:139]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:140]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:142]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:143]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[8]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:145]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[8]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:146]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[9]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:148]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[9]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:149]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[10]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:151]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[10]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:152]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[11]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:154]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[11]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:155]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[12]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:157]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[12]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:158]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[13]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:160]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[13]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:161]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[14]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:163]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[14]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:164]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[15]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:166]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[15]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:167]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[16]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:169]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[16]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:170]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[17]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:172]
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[17]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:173]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:173]
+Finished Parsing XDC File [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Project_Q_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Project_Q_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Project_Q_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2757.137 ; gain = 0.000 ; free physical = 8708 ; free virtual = 12588
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2757.137 ; gain = 0.000 ; free physical = 8708 ; free virtual = 12588
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2757.137 ; gain = 404.484 ; free physical = 8770 ; free virtual = 12650
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1993.154; parent = 1783.486; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3712.840; parent = 2725.125; children = 987.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LVI-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2757.137 ; gain = 404.484 ; free physical = 8770 ; free virtual = 12650
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1993.154; parent = 1783.486; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3712.840; parent = 2725.125; children = 987.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for Project_Q_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Project_Q_i/xlslice_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Project_Q_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2757.137 ; gain = 404.484 ; free physical = 8770 ; free virtual = 12650
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1993.154; parent = 1783.486; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3712.840; parent = 2725.125; children = 987.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2757.137 ; gain = 404.484 ; free physical = 8768 ; free virtual = 12650
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1993.154; parent = 1783.486; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3712.840; parent = 2725.125; children = 987.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port Din[1] in module Project_Q_xlslice_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module Project_Q_xlslice_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2757.137 ; gain = 404.484 ; free physical = 8756 ; free virtual = 12642
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1993.154; parent = 1783.486; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3712.840; parent = 2725.125; children = 987.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3218.113 ; gain = 865.461 ; free physical = 8182 ; free virtual = 12068
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2556.809; parent = 2347.643; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4205.832; parent = 3218.117; children = 987.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3218.113 ; gain = 865.461 ; free physical = 8182 ; free virtual = 12068
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2556.879; parent = 2347.737; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4205.832; parent = 3218.117; children = 987.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3237.145 ; gain = 884.492 ; free physical = 8180 ; free virtual = 12066
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2557.379; parent = 2348.237; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4224.863; parent = 3237.148; children = 987.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3243.082 ; gain = 890.430 ; free physical = 8177 ; free virtual = 12064
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2557.829; parent = 2348.744; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4230.801; parent = 3243.086; children = 987.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3243.082 ; gain = 890.430 ; free physical = 8177 ; free virtual = 12064
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2557.907; parent = 2348.822; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4230.801; parent = 3243.086; children = 987.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3243.082 ; gain = 890.430 ; free physical = 8177 ; free virtual = 12064
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2557.923; parent = 2348.838; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4230.801; parent = 3243.086; children = 987.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3243.082 ; gain = 890.430 ; free physical = 8177 ; free virtual = 12064
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2557.938; parent = 2348.854; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4230.801; parent = 3243.086; children = 987.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3243.082 ; gain = 890.430 ; free physical = 8177 ; free virtual = 12064
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2557.979; parent = 2348.893; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4230.801; parent = 3243.086; children = 987.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3243.082 ; gain = 890.430 ; free physical = 8178 ; free virtual = 12064
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2558.021; parent = 2348.925; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4230.801; parent = 3243.086; children = 987.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |Project_Q_zynq_ultra_ps_e_0_0 |         1|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+----------------------------+------+
+|      |Cell                        |Count |
++------+----------------------------+------+
+|1     |Project_Q_zynq_ultra_ps_e_0 |     1|
+|2     |OBUF                        |     1|
++------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3243.082 ; gain = 890.430 ; free physical = 8177 ; free virtual = 12063
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2558.037; parent = 2348.940; children = 209.668
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4230.801; parent = 3243.086; children = 987.715
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 3243.082 ; gain = 814.523 ; free physical = 8217 ; free virtual = 12103
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 3243.090 ; gain = 890.430 ; free physical = 8217 ; free virtual = 12103
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3250.020 ; gain = 0.000 ; free physical = 8322 ; free virtual = 12208
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3278.770 ; gain = 0.000 ; free physical = 8253 ; free virtual = 12139
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: fba91051
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 113 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 3278.770 ; gain = 1837.324 ; free physical = 8458 ; free virtual = 12344
+INFO: [Common 17-1381] The checkpoint '/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.runs/synth_1/Project_Q_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Project_Q_wrapper_utilization_synth.rpt -pb Project_Q_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Sep  6 21:01:12 2023...
+[Wed Sep  6 21:01:16 2023] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:01:03 ; elapsed = 00:01:17 . Memory (MB): peak = 1936.586 ; gain = 0.000 ; free physical = 10452 ; free virtual = 14333
+[Wed Sep  6 21:01:17 2023] Launched impl_1...
+Run output will be captured here: /home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.runs/impl_1/runme.log
+[Wed Sep  6 21:01:17 2023] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log Project_Q_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Project_Q_wrapper.tcl -notrace
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source Project_Q_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/ip'.
+Command: link_design -top Project_Q_wrapper -part xck26-sfvc784-2LVI-i
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LVI-i
+INFO: [Project 1-454] Reading design checkpoint '/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/ip/Project_Q_zynq_ultra_ps_e_0_0/Project_Q_zynq_ultra_ps_e_0_0.dcp' for cell 'Project_Q_i/zynq_ultra_ps_e_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2356.559 ; gain = 0.000 ; free physical = 9168 ; free virtual = 13050
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/ip/Project_Q_zynq_ultra_ps_e_0_0/Project_Q_zynq_ultra_ps_e_0_0.xdc] for cell 'Project_Q_i/zynq_ultra_ps_e_0/inst'
+Finished Parsing XDC File [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.gen/sources_1/bd/Project_Q/ip/Project_Q_zynq_ultra_ps_e_0_0/Project_Q_zynq_ultra_ps_e_0_0.xdc] for cell 'Project_Q_i/zynq_ultra_ps_e_0/inst'
+Parsing XDC File [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc]
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod1_io_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod2_io_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod3_io_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pmod4_io_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:121]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:121]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[0]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:122]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:122]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:124]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:124]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[1]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:127]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[2]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:128]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:128]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[3]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:131]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:133]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:133]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[4]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:134]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:134]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:136]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:136]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[5]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:139]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:139]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[6]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:140]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:140]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:142]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:142]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[7]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:143]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:143]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[8]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:145]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:145]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[8]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[9]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:148]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:148]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[9]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[10]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:151]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:151]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[10]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[11]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:154]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:154]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[11]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:155]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:155]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[12]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:157]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:157]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[12]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:158]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[13]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:160]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:160]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[13]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:161]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:161]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[14]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:163]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:163]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[14]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:164]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:164]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[15]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:166]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:166]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[15]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:167]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:167]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[16]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:169]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:169]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[16]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:170]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:170]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[17]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:172]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:172]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rpi_gpio_tri_io[17]'. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:173]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:173]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:173]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+INFO: [Common 17-14] Message 'Common 17-55' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc:173]
+Finished Parsing XDC File [/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.srcs/constrs_1/imports/constraints/project_Q.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2439.562 ; gain = 0.000 ; free physical = 9056 ; free virtual = 12938
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+11 Infos, 100 Warnings, 100 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2439.562 ; gain = 993.211 ; free physical = 9056 ; free virtual = 12938
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xck26'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.78 . Memory (MB): peak = 2453.242 ; gain = 13.680 ; free physical = 9047 ; free virtual = 12929
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 17bd2f8ea
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2689.078 ; gain = 235.836 ; free physical = 8878 ; free virtual = 12761
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 18b15d5dc
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2971.000 ; gain = 0.000 ; free physical = 8635 ; free virtual = 12518
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 264 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 18b15d5dc
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2971.000 ; gain = 0.000 ; free physical = 8635 ; free virtual = 12518
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 139272c10
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2971.000 ; gain = 0.000 ; free physical = 8635 ; free virtual = 12518
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 2 cells
+INFO: [Opt 31-1021] In phase Sweep, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+Phase 4 BUFG optimization | Checksum: 139272c10
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3003.016 ; gain = 32.016 ; free physical = 8635 ; free virtual = 12518
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 139272c10
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3003.016 ; gain = 32.016 ; free physical = 8635 ; free virtual = 12518
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 139272c10
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3003.016 ; gain = 32.016 ; free physical = 8635 ; free virtual = 12518
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |             264  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               2  |                                              1  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3003.016 ; gain = 0.000 ; free physical = 8635 ; free virtual = 12518
+Ending Logic Optimization Task | Checksum: 18f25aaa4
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3003.016 ; gain = 32.016 ; free physical = 8635 ; free virtual = 12518
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 18f25aaa4
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3003.016 ; gain = 0.000 ; free physical = 8635 ; free virtual = 12517
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 18f25aaa4
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3003.016 ; gain = 0.000 ; free physical = 8635 ; free virtual = 12517
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3003.016 ; gain = 0.000 ; free physical = 8635 ; free virtual = 12517
+Ending Netlist Obfuscation Task | Checksum: 18f25aaa4
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3003.016 ; gain = 0.000 ; free physical = 8635 ; free virtual = 12517
+INFO: [Common 17-83] Releasing license: Implementation
+30 Infos, 100 Warnings, 100 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3051.039 ; gain = 40.020 ; free physical = 8621 ; free virtual = 12507
+INFO: [Common 17-1381] The checkpoint '/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.runs/impl_1/Project_Q_wrapper_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file Project_Q_wrapper_drc_opted.rpt -pb Project_Q_wrapper_drc_opted.pb -rpx Project_Q_wrapper_drc_opted.rpx
+Command: report_drc -file Project_Q_wrapper_drc_opted.rpt -pb Project_Q_wrapper_drc_opted.pb -rpx Project_Q_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.runs/impl_1/Project_Q_wrapper_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xck26'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3202.637 ; gain = 0.000 ; free physical = 8605 ; free virtual = 12492
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: e5fa1433
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3202.637 ; gain = 0.000 ; free physical = 8605 ; free virtual = 12492
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3202.637 ; gain = 0.000 ; free physical = 8605 ; free virtual = 12492
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 13d6ecf72
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 4233.957 ; gain = 1031.320 ; free physical = 7673 ; free virtual = 11690
+
+Phase 1.3 Build Placer Netlist Model
+WARNING: [Place 30-2953] Timing driven mode will be turned off because no critical terminals were found.
+Phase 1.3 Build Placer Netlist Model | Checksum: 16dbed283
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 4265.973 ; gain = 1063.336 ; free physical = 7623 ; free virtual = 11642
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 16dbed283
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 4265.973 ; gain = 1063.336 ; free physical = 7622 ; free virtual = 11642
+Phase 1 Placer Initialization | Checksum: 16dbed283
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 4265.973 ; gain = 1063.336 ; free physical = 7622 ; free virtual = 11642
+
+Phase 2 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7622 ; free virtual = 11642
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 4265.973 ; gain = 1063.336 ; free physical = 7622 ; free virtual = 11642
+INFO: [Place 30-281] No place-able instance is found; design doesn't contain any instance or all instances are placed
+Ending Placer Task | Checksum: 13d6ecf72
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 4265.973 ; gain = 1063.336 ; free physical = 7622 ; free virtual = 11642
+INFO: [Common 17-83] Releasing license: Implementation
+47 Infos, 101 Warnings, 100 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 4265.973 ; gain = 1067.816 ; free physical = 7645 ; free virtual = 11665
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.08 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7635 ; free virtual = 11659
+INFO: [Common 17-1381] The checkpoint '/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.runs/impl_1/Project_Q_wrapper_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file Project_Q_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.19 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7552 ; free virtual = 11574
+INFO: [runtcl-4] Executing : report_utilization -file Project_Q_wrapper_utilization_placed.rpt -pb Project_Q_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file Project_Q_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.1 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7517 ; free virtual = 11539
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xck26'
+
+Starting Initial Update Timing Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7435 ; free virtual = 11457
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+57 Infos, 101 Warnings, 100 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.08 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7366 ; free virtual = 11392
+INFO: [Common 17-1381] The checkpoint '/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.runs/impl_1/Project_Q_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xck26'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: a8b40dea ConstDB: 0 ShapeSum: 94bac188 RouteDB: 0
+Nodegraph reading from file.  Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.41 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7342 ; free virtual = 11370
+Post Restoration Checksum: NetGraph: 3b885f8b NumContArr: 1234c1a1 Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 4dbd212c
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7335 ; free virtual = 11363
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 4dbd212c
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7286 ; free virtual = 11315
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 4dbd212c
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7286 ; free virtual = 11315
+
+Phase 2.3 Global Clock Net Routing
+Phase 2.3 Global Clock Net Routing | Checksum: 4dbd212c
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7285 ; free virtual = 11314
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 4dbd212c
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7284 ; free virtual = 11313
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 3
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 3
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 4dbd212c
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7286 ; free virtual = 11314
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 4dbd212c
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7286 ; free virtual = 11314
+ Number of Nodes with overlaps = 0
+Phase 3 Initial Routing | Checksum: 1018338d3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7264 ; free virtual = 11293
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+Phase 4.1 Global Iteration 0 | Checksum: 1018338d3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7263 ; free virtual = 11292
+
+Phase 4.2 Additional Iteration for Hold
+Phase 4.2 Additional Iteration for Hold | Checksum: 1018338d3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7263 ; free virtual = 11292
+Phase 4 Rip-up And Reroute | Checksum: 1018338d3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7263 ; free virtual = 11292
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 1018338d3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7265 ; free virtual = 11294
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1018338d3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7265 ; free virtual = 11294
+Phase 5 Delay and Skew Optimization | Checksum: 1018338d3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7265 ; free virtual = 11294
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1018338d3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7265 ; free virtual = 11294
+Phase 6.1 Hold Fix Iter | Checksum: 1018338d3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7265 ; free virtual = 11294
+Phase 6 Post Hold Fix | Checksum: 1018338d3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7265 ; free virtual = 11294
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00292674 %
+  Global Horizontal Routing Utilization  = 0.000330388 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 1018338d3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7265 ; free virtual = 11294
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1018338d3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7263 ; free virtual = 11292
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1018338d3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7263 ; free virtual = 11292
+
+Phase 10 Resolve XTalk
+Phase 10 Resolve XTalk | Checksum: 1018338d3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7265 ; free virtual = 11294
+
+Phase 11 Post Router Timing
+Phase 11 Post Router Timing | Checksum: 1018338d3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7265 ; free virtual = 11294
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7330 ; free virtual = 11359
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+66 Infos, 101 Warnings, 100 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.08 . Memory (MB): peak = 4265.973 ; gain = 0.000 ; free physical = 7322 ; free virtual = 11356
+INFO: [Common 17-1381] The checkpoint '/home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.runs/impl_1/Project_Q_wrapper_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file Project_Q_wrapper_drc_routed.rpt -pb Project_Q_wrapper_drc_routed.pb -rpx Project_Q_wrapper_drc_routed.rpx
+Command: report_drc -file Project_Q_wrapper_drc_routed.rpt -pb Project_Q_wrapper_drc_routed.pb -rpx Project_Q_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.runs/impl_1/Project_Q_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file Project_Q_wrapper_methodology_drc_routed.rpt -pb Project_Q_wrapper_methodology_drc_routed.pb -rpx Project_Q_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file Project_Q_wrapper_methodology_drc_routed.rpt -pb Project_Q_wrapper_methodology_drc_routed.pb -rpx Project_Q_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.runs/impl_1/Project_Q_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file Project_Q_wrapper_power_routed.rpt -pb Project_Q_wrapper_power_summary_routed.pb -rpx Project_Q_wrapper_power_routed.rpx
+Command: report_power -file Project_Q_wrapper_power_routed.rpt -pb Project_Q_wrapper_power_summary_routed.pb -rpx Project_Q_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+78 Infos, 101 Warnings, 100 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file Project_Q_wrapper_route_status.rpt -pb Project_Q_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file Project_Q_wrapper_timing_summary_routed.rpt -pb Project_Q_wrapper_timing_summary_routed.pb -rpx Project_Q_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2LVI, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file Project_Q_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file Project_Q_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file Project_Q_wrapper_bus_skew_routed.rpt -pb Project_Q_wrapper_bus_skew_routed.pb -rpx Project_Q_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2LVI, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+Command: write_bitstream -force Project_Q_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xck26'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 47493888 bits.
+Writing bitstream ./Project_Q_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 4303.613 ; gain = 13.602 ; free physical = 7283 ; free virtual = 11321
+INFO: [Common 17-206] Exiting Vivado at Wed Sep  6 21:02:10 2023...
+[Wed Sep  6 21:02:15 2023] impl_1 finished
+wait_on_runs: Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:58 . Memory (MB): peak = 1944.590 ; gain = 0.000 ; free physical = 10296 ; free virtual = 14333
+INFO: [Project 1-1918] Creating Hardware Platform: /home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.xsa ...
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: /home/use/Projects/quadruped/hardware/fpga/vivado/project/Project_Q.xsa
+INFO: [Hsi 55-2053] elapsed time for repository (/home/use/Packages/Xilinx_v2022.2/Vivado/2022.2/data/embeddedsw) loading 0 seconds
+INFO: [Vivado 12-12082] Found metadata file: xsa.json
+INFO: [Vivado 12-6078] Validating platform properties...
+INFO: [Vivado 12-6076] Validating fixed platform...
+INFO: [Vivado 12-5958] Found a sysdef.xml file in the fixed Hardware Platform.
+INFO: [Vivado 12-6077] Validating platform files...
+INFO: [Vivado 12-6067] Found file 'Project_Q.bit' of type 'FULL_BIT' in the Hardware Platform.
+INFO: [Vivado 12-6066] Finished running validate_hw_platform for file: './project/Project_Q.xsa'
+INFO: [Common 17-206] Exiting Vivado at Wed Sep  6 21:02:18 2023...
