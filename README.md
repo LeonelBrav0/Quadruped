@@ -133,76 +133,72 @@ scp quadruped petalinux@<KR260 IP Address>:/home/petalinux
 ---
 
 
+```markdown
+# Debugging Guide
 
+## Petalinux JTAG Boot (requires .wic)
+```bash
+petalinux-package --prebuilt --fpga images/linux/system.bit --force
+petalinux-boot --jtag --prebuilt 3 --hw_server-url <hostname:3121>
+```
 
-Debug:
+## Open Terminal
+```bash
+sudo screen /dev/ttyUSB<device_num> 115200
+killall screen
+```
 
-Petalinux JTAG boot (requires .wic)
-    petalinux-package --prebuilt --fpga images/linux/system.bit --force
-    petalinux-boot --jtag --prebuilt 3 --hw_server-url <hostname:3121>
+## Debug: Cannot Find Mount Point for Boot
+- SD card uses `dev/sda1` and `dev/sda2`
+- **Issue:** Cannot find `sda1` nor `sda2`
+- **Temporary Solution:** Mount in `/dev/ram` instead with the following parameters:
+  ```
+  earlycon console=ttyPS1,115200 clk_ignore_unused root=/dev/ram0 rw init_fatal_sh=1
+  ```
+  > Note: This solution has not been tried yet.
 
-Open terminal
-    sudo screen /dev/ttyUSB<device_num> 115200
-    killall screen
+- **Update:** Changing Vivado to support USB and interrupts.
+  - (Ignore this: Now using new BSP where we mount on `/dev/sda`)
 
+## Where is `Platform Setup` in Vivado?
+- [Xilinx Support Link](https://support.xilinx.com/s/question/0D52E00006iHqAvSAK/vivado-20202-cant-not-find-platform-interface?language=en_US)
 
-Debug: Cannot find mount point for boot
-    sd card uses dev/sda1 and dev/sda2
-    Issue: Cannot find sda1 nor sda2
-    temp solution is to mount in /dev/ram instead " earlycon console=ttyPS1,115200 clk_ignore_unused root=/dev/ram0 rw init_fatal_sh=1" (not actually tried)
+## Enabling TCF from PetaLinux
+- [Configuring Linux for Debugging](https://www.beyond-circuits.com/wordpress/tutorial/tutorial25/#:~:text=Configuring%20Linux%20for%20Debugging&text=Press%20return%20to%20select%20Filesystem,back%20out%20of%20petalinux%2Dconfig.)
+- [Preparing the Build System for Debugging](https://docs.xilinx.com/r/en-US/ug1144-petalinux-tools-reference-guide/Preparing-the-Build-System-for-Debugging?tocId=wj4lwcoPKe3Cco5o1qG_IQ)
 
-    --now changing Vivado to support usb and interrupts
-    (Ignore this: Now using new BSP where we mount on /dev/sda )
+## Board Bringup if Failed Mount
+- [Xilinx KRS Guide](https://github.com/Xilinx/KRS/blob/main/sphinx/source/docs/howto.md)
+  - Problem ended up being the wrong petalinux BSP installed.
 
-Where is readme.md?
-    https://support.xilinx.com/s/question/0D52E00006iHqAvSAK/vivado-20202-cant-not-find-platform-interface?language=en_US
+## Tutorials
+### Kria KR260 Template
+- [Getting Started with the Kria KR260 in Vivado 2022.1](https://www.hackster.io/whitney-knitter/getting-started-with-the-kria-kr260-in-vivado-2022-1-33746d)
+- [Add Peripheral Support to Kria KR260 Vivado 2022.1 Project](https://www.hackster.io/whitney-knitter/add-peripheral-support-to-kria-kr260-vivado-2022-1-project-874960)
+- [Getting Started with the Kria KR260 in PetaLinux 2022.1](https://www.hackster.io/whitney-knitter/getting-started-with-the-kria-kr260-in-petalinux-2022-1-daec16#overview)
+- [RPI PMOD Connector GPIO with Custom PL Design in Kria KR260](https://www.hackster.io/whitney-knitter/rpi-pmod-connector-gpio-with-custom-pl-design-in-kria-kr260-53c40e)
+- [Independent Custom RTL Designs on Kria KR260](https://www.hackster.io/whitney-knitter/independent-custom-rtl-designs-on-kria-kr260-d5cd0b)
+- [Accelerated Design Development on Kria KR260 in Vitis 2022.1](https://www.hackster.io/whitney-knitter/accelerated-design-development-on-kria-kr260-in-vitis-2022-1-883799)
 
-Enabling TCF from PetaLinux 
-    https://www.beyond-circuits.com/wordpress/tutorial/tutorial25/#:~:text=Configuring%20Linux%20for%20Debugging&text=Press%20return%20to%20select%20Filesystem,back%20out%20of%20petalinux%2Dconfig.
-    better:
-    https://docs.xilinx.com/r/en-US/ug1144-petalinux-tools-reference-guide/Preparing-the-Build-System-for-Debugging?tocId=wj4lwcoPKe3Cco5o1qG_IQ
+### Using SPI Device in ZynqMP
+- [SPIDEV Application Using PS SPI on ZYNQMP](https://support.xilinx.com/s/article/SPIDEV-application-using-PS-SPI-on-ZYNQMP?language=en_US)
+  > Note: You have to enable user mode spidev driver support in petalinux.
 
-Board bringup if failed mount:
-    https://github.com/Xilinx/KRS/blob/main/sphinx/source/docs/howto.md
+## Updating Linux Device Tree ZynqMP
+1. Copy the `system-user.dtsi` file into the `<Project Path>/components/plnx_workspace/device-tree/device-tree` folder (if not already there) from `<Project Path>/project-spec/meta-user/recipes-bsp/device-tree/files`.
+2. Update the file with desired device-tree changes.
+3. Modify the `system-top.dts` file to replace all instances of `#include` with `/include/`. In my project, this is the only file with `#includes`. This is really just to make a change to this file.
+   > Note: You can actually just add a space character and save.
+4. Perform the following commands (see note below about distclean):
+```bash
+petalinux-build -c device-tree -x cleansstate
+petalinux-build -c device-tree
+petalinux-build -c kernel -x distclean
+petalinux-build -c kernel
+```
+> Note: The device-tree builds update the `system.dtb` file in the `<Project Path>/images/Linux` folder. The kernel builds pull those changes into the kernel images (e.g. `image.ub`). As an alternative to `distclean`, which will wipe out any kernel configuration changes that you may have made, you could use "petalinux-config -c kernel", toggle anything on and off (resulting in no actual configuration change), save the kernel, and then just perform a `petalinux-build`. Or better yet, you could probably just run the touch command on the kernel configuration file (if you know where it is) and then perform the `petalinux-build`.
+```
 
-    Problem ended up being wrong petalinux bsp installed 
-
-Tutorials:
-    Kria KR260 Template:
-    https://www.hackster.io/whitney-knitter/getting-started-with-the-kria-kr260-in-vivado-2022-1-33746d
-    https://www.hackster.io/whitney-knitter/add-peripheral-support-to-kria-kr260-vivado-2022-1-project-874960
-    https://www.hackster.io/whitney-knitter/getting-started-with-the-kria-kr260-in-petalinux-2022-1-daec16#overview
-    https://www.hackster.io/whitney-knitter/rpi-pmod-connector-gpio-with-custom-pl-design-in-kria-kr260-53c40e
-    https://www.hackster.io/whitney-knitter/independent-custom-rtl-designs-on-kria-kr260-d5cd0b
-    https://www.hackster.io/whitney-knitter/accelerated-design-development-on-kria-kr260-in-vitis-2022-1-883799
-
-    Using SPI Device in ZynqMP:
-    https://support.xilinx.com/s/article/SPIDEV-application-using-PS-SPI-on-ZYNQMP?language=en_US
-    (Have to enable user mode spidev driver support in petalinux)
-
-Updating Linux Device Tree ZynqMP:
-    First, copy the system-user.dtsi file into the <Project
-    Path>/components/plnx_workspace/device-tree/device-tree folder (if not already there) from
-    <Project Path>/project-spec/meta-user/recipes-bsp/device-tree/files. 
-    
-    Update the file with desired device-tree changes.
-
-    Modify the system-top.dts file to replace all instances of #include with /include/. In my project,
-    this is the only file with #includes. This is really just to make a change to this file. EDIT: You
-    can actually just add a space character and save.
-
-    Perform the following commands (see note below about distclean):
-    petalinux-build -c device-tree -x cleansstate
-    petalinux-build -c device-tree
-    petalinux-build -c kernel -x distclean
-    petalinux-build -c kernel
-    
-    The device-tree builds update the system.dtb file in the <Project Path>/images/Linux folder. The kernel builds pull those changes into the kernel images (e.g. image.ub). EDIT: As an
-    alternative to distclean, which will wipe out any kernel configuration changes that you may
-    have made, you could use "petalinux-config -c kernel", toggle anything on and off (resulting in
-    no actual configuration change), save the kernel, and then just perform a petalinux-build. Or
-    better yet, you could probably just run the touch command on the kernel configuration file (if
-    you know where it is) and then perform the petalinux-build.
 
 ## Register Calculations
 
