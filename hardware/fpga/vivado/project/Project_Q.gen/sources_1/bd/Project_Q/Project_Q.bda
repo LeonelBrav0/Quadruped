@@ -23,6 +23,24 @@
   <key id="VT" for="node" attr.name="vert_type" attr.type="string"/>
   <graph id="G" edgedefault="undirected" parse.nodeids="canonical" parse.edgeids="canonical" parse.order="nodesfirst">
     <node id="n0">
+      <data key="BA">0x0090000000</data>
+      <data key="BP">C_BASEADDR</data>
+      <data key="HA">0x009FFFFFFF</data>
+      <data key="HP">C_HIGHADDR</data>
+      <data key="MA">Data</data>
+      <data key="MX">/zynq_ultra_ps_e_0</data>
+      <data key="MI">M_AXI_HPM0_LPD</data>
+      <data key="MS">SEG_axil_reg_wrapper_0_reg0</data>
+      <data key="MV">xilinx.com:ip:zynq_ultra_ps_e:3.4</data>
+      <data key="TM">both</data>
+      <data key="SX">/axil_reg_wrapper_0</data>
+      <data key="SI">s_axi</data>
+      <data key="SS">reg0</data>
+      <data key="SV">xilinx.com:module_ref:axil_reg_wrapper:1.0</data>
+      <data key="TU">register</data>
+      <data key="VT">AC</data>
+    </node>
+    <node id="n1">
       <data key="BA">0x0080040000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x008004FFFF</data>
@@ -40,11 +58,11 @@
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n1">
+    <node id="n2">
       <data key="VM">Project_Q</data>
       <data key="VT">BC</data>
     </node>
-    <node id="n2">
+    <node id="n3">
       <data key="BA">0x0080020000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x008002FFFF</data>
@@ -62,7 +80,7 @@
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n3">
+    <node id="n4">
       <data key="BA">0x0080000000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x008000FFFF</data>
@@ -81,7 +99,7 @@
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n4">
+    <node id="n5">
       <data key="BA">0x0080060000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x008006FFFF</data>
@@ -99,7 +117,7 @@
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n5">
+    <node id="n6">
       <data key="BA">0x0080010000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x008001FFFF</data>
@@ -117,7 +135,7 @@
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n6">
+    <node id="n7">
       <data key="BA">0x0080030000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x008003FFFF</data>
@@ -135,12 +153,12 @@
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n7">
+    <node id="n8">
       <data key="VH">2</data>
       <data key="VM">Project_Q</data>
       <data key="VT">VR</data>
     </node>
-    <node id="n8">
+    <node id="n9">
       <data key="BA">0x0080050000</data>
       <data key="BP">C_BASEADDR</data>
       <data key="HA">0x008005FFFF</data>
@@ -158,53 +176,35 @@
       <data key="TU">register</data>
       <data key="VT">AC</data>
     </node>
-    <node id="n9">
+    <node id="n10">
       <data key="TU">active</data>
       <data key="VH">2</data>
       <data key="VT">PM</data>
     </node>
-    <node id="n10">
-      <data key="BA">0x0082000000</data>
-      <data key="BP">C_S_AXI_BASEADDR</data>
-      <data key="HA">0x0082001FFF</data>
-      <data key="HP">C_S_AXI_HIGHADDR</data>
-      <data key="MA">Data</data>
-      <data key="MX">/zynq_ultra_ps_e_0</data>
-      <data key="MI">M_AXI_HPM0_LPD</data>
-      <data key="MS">SEG_axi_bram_ctrl_0_Mem0</data>
-      <data key="MV">xilinx.com:ip:zynq_ultra_ps_e:3.4</data>
-      <data key="TM">both</data>
-      <data key="SX">/axi_bram_ctrl_0</data>
-      <data key="SI">S_AXI</data>
-      <data key="SS">Mem0</data>
-      <data key="SV">xilinx.com:ip:axi_bram_ctrl:4.1</data>
-      <data key="TU">memory</data>
-      <data key="VT">AC</data>
-    </node>
-    <edge id="e0" source="n1" target="n7"/>
-    <edge id="e1" source="n7" target="n9"/>
-    <edge id="e2" source="n3" target="n9">
+    <edge id="e0" source="n2" target="n8"/>
+    <edge id="e1" source="n8" target="n10"/>
+    <edge id="e2" source="n4" target="n10">
       <data key="EH">2</data>
     </edge>
-    <edge id="e3" source="n5" target="n9">
+    <edge id="e3" source="n6" target="n10">
       <data key="EH">2</data>
     </edge>
-    <edge id="e4" source="n2" target="n9">
+    <edge id="e4" source="n3" target="n10">
       <data key="EH">2</data>
     </edge>
-    <edge id="e5" source="n6" target="n9">
+    <edge id="e5" source="n7" target="n10">
       <data key="EH">2</data>
     </edge>
-    <edge id="e6" source="n8" target="n9">
+    <edge id="e6" source="n9" target="n10">
       <data key="EH">2</data>
     </edge>
-    <edge id="e7" source="n4" target="n9">
+    <edge id="e7" source="n5" target="n10">
       <data key="EH">2</data>
     </edge>
-    <edge id="e8" source="n0" target="n9">
+    <edge id="e8" source="n1" target="n10">
       <data key="EH">2</data>
     </edge>
-    <edge id="e9" source="n10" target="n9">
+    <edge id="e9" source="n0" target="n10">
       <data key="EH">2</data>
     </edge>
   </graph>

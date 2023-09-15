@@ -11,7 +11,10 @@
 *hardware/fpga/vivado/project/Project_Q.cache/*
 *hardware/fpga/vivado/project/Project_Q.runs/*
 *hardware/fpga/vivado/project/Project_Q.sim/*
+
 *hardware/sim/work
+*hardware/sim/run_modelsim.do
+*hardware/sim/vsim.wlf
 
 *hardware/fpga/deploy/build/Project_Q/*
 

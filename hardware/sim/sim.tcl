@@ -28,9 +28,9 @@ eval [format "vlog %s" $VLOG_OPTIONS]
 eval [format "vsim %s" $VSIM_OPTIONS]
 eval [format "add wave -r $WAVE_LIST"]
 eval [format "run -all"]
-if {$DUMP_WAVEFORM == 1} {
-    eval [format "wave export -file vsim.vcd -format vcd -designunit $TOP_SIM_MODULE -f"]
-}
+# if {$DUMP_WAVEFORM == 1} {
+#     eval [format "wave export -file vsim.vcd -format vcd -designunit $TOP_SIM_MODULE -f"]
+# }
 eval [format "quit"]
 
 #eval [format "qrun %s %s %s" $VLOG_OPTIONS $VOPT_OPTIONS $VSIM_OPTIONS]

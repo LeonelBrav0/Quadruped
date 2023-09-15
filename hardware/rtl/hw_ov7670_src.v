@@ -45,9 +45,9 @@ output reg  RST                                                        ;
 output wire XCLK                                                       ;
 
 //-------------------------PARAMETERS-------------------------//
-localparam IDLE         = 0;
-localparam CAPTURE      = 1;
-localparam WRITE        = 2;
+localparam IDLE         = 2'b00;
+localparam CAPTURE      = 2'b10;
+localparam WRITE        = 2'b11;
 
 //-------------------------WIRE + REG-------------------------//
 reg  [                              2 : 0]  current_state       ;
@@ -71,7 +71,10 @@ begin
     case(current_state)
         IDLE:
         begin
-            
+            if (VSYNC)
+            begin
+                next_state <= CAPTURE;
+            end
         end
 
         CAPTURE:

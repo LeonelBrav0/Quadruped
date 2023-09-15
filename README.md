@@ -53,27 +53,42 @@
 
 This document provides a step-by-step guide for the hardware and software workflows for the Quadruped project.
 
+## Tools
+
+### -Vivado v2022.2
+### -PetaLinux v2022.2
+### -Vitis v2022.2
+### -Ubuntu v18.04
+
 ## Hardware Workflow
 
-### 1. Generate `.xsa`
+### 1. Vivado & PetaLinux workflow
 
-#### a. Generate Petalinux
+### 1.1 Generate .xsa from Vivado.
 
 ```bash
-petalinux-config --get-hw-description ../vivado/project/Project_Q.xsa --silentconfig
-# Optional configurations
-# petalinux-config -c **
-petalinux-build
-# Optional SDK build
-# petalinux-build --sdk
-petalinux-package --boot --u-boot --force
-petalinux-package --wic --images-dir images/linux/ --bootfiles "ramdisk.cpio.gz.u-boot,boot.scr,Image,system.dtb,system-zynqmp-sck-kr-g-revB.dtb" --disk-name "sda"
-# Optional listing
-# ls -latr images/linux/ | grep wic
+$ Vivado &
 ```
 
-#### b. Generate `dtbo`
+#### b. Generate Petalinux
 
+```bash
+# Update hardware description
+$ petalinux-config --get-hw-description ../vivado/project/Project_Q.xsa --silentconfig
+
+# Optional configurations for kernel, rootfs
+$ petalinux-config -c <kernel/rootfs>
+
+$ petalinux-build
+$ petalinux-package --boot --u-boot --force
+$ petalinux-package --wic --images-dir images/linux/ --bootfiles "ramdisk.cpio.gz.u-boot,boot.scr,Image,system.dtb,system-zynqmp-sck-kr-g-revB.dtb" --disk-name "sda"
+# Check timestamp of .wic file
+$ ls -latr images/linux/ | grep wic
+```
+
+#### c. Generate `dtbo`
+
+Build device tree
 ```bash
 cd /home/use/Projects/quadruped/hardware/fpga/deploy/build/
 xsct
@@ -92,15 +107,13 @@ mv Project_Q_wrapper.bin Project_Q.bit.bin
 
 # Edit shell.json
 vi shell.json
-```
 
-Inside `shell.json`:
+~{
+~    "shell_type" : "XRT_FLAT",
+~    "num_slots" : "1"
+~}
+~[shell.json] New File
 
-```json
-{
-    "shell_type" : "XRT_FLAT",
-    "num_slots" : "1"
-}
 ```
 
 ### 2. Boot Kria
