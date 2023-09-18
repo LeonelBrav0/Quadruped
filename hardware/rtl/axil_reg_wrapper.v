@@ -24,15 +24,15 @@ module axil_reg_wrapper #(
 );
 
     // Instantiate the axil_regs module
-    axil_reg  
+    axil_regs  
     #(
         C_DATA_W,
         C_ADDR_W
     )
     u_axil_reg
     (
-        .s_axi_aclk(clk),
-        .s_axi_aresetn(resetn),
+        .s_axi_aclk(s_axi_aclk),
+        .s_axi_aresetn(s_axi_aresetn),
         .s_axi_awaddr(s_axi_awaddr),
         .s_axi_awvalid(s_axi_awvalid),
         .s_axi_awready(s_axi_awready),
