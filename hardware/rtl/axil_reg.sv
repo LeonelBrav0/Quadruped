@@ -6,35 +6,47 @@ module axil_regs #(
     parameter C_ADDR_W = 32
 ) (
 
-    input  logic                                        s_axi_aclk          ,
-    input  logic                                        s_axi_aresetn       ,
-    input  logic [                   C_ADDR_W - 1 : 0]  s_axi_awaddr        ,
-    input  logic                                        s_axi_awvalid       ,
-    output logic                                        s_axi_awready       ,
-    input  logic [                   C_DATA_W - 1 : 0]  s_axi_wdata         ,
-    input  logic                                        s_axi_wvalid        ,
-    output logic                                        s_axi_wready        ,
-    output logic [                              1 : 0]  s_axi_bresp         ,
-    output logic                                        s_axi_bvalid        ,
-    input  logic                                        s_axi_bready        ,
-    input  logic [                   C_ADDR_W - 1 : 0]  s_axi_araddr        ,
-    input  logic                                        s_axi_arvalid       ,
-    output logic                                        s_axi_arready       ,
-    output logic [                   C_DATA_W - 1 : 0]  s_axi_rdata         ,
-    output logic [                              1 : 0]  s_axi_rresp         ,
-    output logic                                        s_axi_rvalid        ,
+    input  logic                                        s_axi_aclk                      ,
+    input  logic                                        s_axi_aresetn                   ,
+    input  logic [                   C_ADDR_W - 1 : 0]  s_axi_awaddr                    ,
+    input  logic                                        s_axi_awvalid                   ,
+    output logic                                        s_axi_awready                   ,
+    input  logic [                   C_DATA_W - 1 : 0]  s_axi_wdata                     ,
+    input  logic                                        s_axi_wvalid                    ,
+    output logic                                        s_axi_wready                    ,
+    output logic [                              1 : 0]  s_axi_bresp                     ,
+    output logic                                        s_axi_bvalid                    ,
+    input  logic                                        s_axi_bready                    ,
+    input  logic [                   C_ADDR_W - 1 : 0]  s_axi_araddr                    ,
+    input  logic                                        s_axi_arvalid                   ,
+    output logic                                        s_axi_arready                   ,
+    output logic [                   C_DATA_W - 1 : 0]  s_axi_rdata                     ,
+    output logic [                              1 : 0]  s_axi_rresp                     ,
+    output logic                                        s_axi_rvalid                    ,
     input  logic                                        s_axi_rready
 );
 
 //-------------------------IO DECLARATION-------------------------//
-    logic [                   C_ADDR_W - 1 : 0]  axi_awaddr                 ;
-    logic                                        axi_awready                ;
-    logic [                              1 : 0]  axi_bresp                  ;
-    logic                                        axi_bvalid                 ;
-    logic [                   C_ADDR_W - 1 : 0]  axi_araddr                 ;
-    logic                                        axi_arready                ;
-    logic [                   C_DATA_W - 1 : 0]  axi_rdata                  ;
-    logic                                        axi_rvalid                 ;
+    logic [                   C_ADDR_W - 1 : 0]  axi_awaddr                             ;
+    logic                                        axi_awready                            ;
+    logic [                              1 : 0]  axi_bresp                              ;
+    logic                                        axi_bvalid                             ;
+    logic [                   C_ADDR_W - 1 : 0]  axi_araddr                             ;
+    logic                                        axi_arready                            ;
+    logic [                   C_DATA_W - 1 : 0]  axi_rdata                              ;
+    logic                                        axi_rvalid                             ;
+
+//-------------------------PARAMETERS-------------------------//
+    parameter                                    REGS_TIMEOUT = 15                      ;
+    int                                          timeout_rd                             ;
+    int                                          timeout_wr                             ;
+
+//-------------------------WIRE + REG-------------------------//
+    logic                                        waddr_strb                             ;
+    logic                                        bresp_strb                             ;
+    logic                                        wr_en                                  ;
+    logic                                        raddr_strb                             ;
+    logic                                        rdata_strb                             ;
 
     // Signals for user logic register space
     const logic [             C_ADDR_W - 1 : 0]  VER_ADDR               = 32'h00        ;
@@ -49,25 +61,12 @@ module axil_regs #(
     logic [                              7 : 0]  reg_pwm_duty                           ;
     logic [                   C_DATA_W - 1 : 0]  reg_data_out                           ;
 
-//-------------------------PARAMETERS-------------------------//
-    parameter                                    REGS_TIMEOUT = 15          ;
-
-    int                                          timeout_rd                 ;
-    int                                          timeout_wr                 ;
-    logic                                        waddr_strb                 ;
-    logic                                        bresp_strb                 ;
-    logic                                        wr_en                      ;
-    logic                                        raddr_strb                 ;
-    logic                                        rdata_strb                 ;
-
-//-------------------------WIRE + REG-------------------------//
-
     typedef enum {rd_idle, start_rd, rd_data} rd_sm;
-    rd_sm rd_st;
-
     typedef enum {wr_idle, wr_data, wr_resp} wr_sm;
-    wr_sm wr_st;
     
+    rd_sm rd_st;
+    wr_sm wr_st;
+
 //-------------------------STATE LOGIC-------------------------//
     // Write register state machine
     always_ff @(posedge s_axi_aclk or negedge s_axi_aresetn) 
@@ -142,7 +141,8 @@ module axil_regs #(
             endcase
         end
     end
-    
+
+    // Reg write memory map
     always_ff @(posedge s_axi_aclk) 
     begin
         if (s_axi_aresetn == 1'b0) 
@@ -180,7 +180,6 @@ module axil_regs #(
     end
 
     // Register read state machine
-
     always_ff @(posedge s_axi_aclk)
     begin
         if (!s_axi_aresetn)
@@ -225,6 +224,7 @@ module axil_regs #(
         end
     end
     
+    // Reg read memory map
     always @(posedge s_axi_aclk) begin
         logic [C_ADDR_W-1:0] loc_addr;
 

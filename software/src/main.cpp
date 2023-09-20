@@ -18,12 +18,16 @@
 #include <arpa/inet.h>
 
 // Custom Headers
+// Firmware
 #include "project_properties.h"
 #include "gpio_driver.h"
 #include "mmap_utils.h"
 #include "command_parser.h"
 #include "socket_server.h"
 #include "axi_iic.h"
+
+// CModel
+#include "hw_ov7670_src.h"
 
 void print_banner()
 {
@@ -35,6 +39,7 @@ void print_banner()
 
 int main() 
 {
+#ifdef ARM
     print_banner();
     std::cout << "[INFO] Opening /dev/mem\n";
     int devmem = open_devmem();
@@ -76,55 +81,79 @@ int main()
     axi_iic_0.print_timing_regs();
     
 
-    // int cmd_socket = initialize_socket_server(40);
+    int cmd_socket = initialize_socket_server(40);
 
-    // int new_socket;
-    // char buffer[1024] = {0};
-    // struct sockaddr_in address;
-    // int addrlen = sizeof(address);
+    int new_socket;
+    char buffer[1024] = {0};
+    struct sockaddr_in address;
+    int addrlen = sizeof(address);
+
+
     
 
-    // std::cout << "[INFO] Initialization finished. Starting main loop...\n";
+    std::cout << "[INFO] Initialization finished. Starting main loop...\n";
 
-    // while (true) 
-    // {
-    //     if ((new_socket = accept(cmd_socket, (struct sockaddr *)&address, (socklen_t*)&addrlen)) < 0) 
-    //     {
-    //         perror("accept");
-    //         exit(EXIT_FAILURE);
-    //     }
+    while (true) 
+    {
+        if ((new_socket = accept(cmd_socket, (struct sockaddr *)&address, (socklen_t*)&addrlen)) < 0) 
+        {
+            perror("accept");
+            exit(EXIT_FAILURE);
+        }
 
-    //     std::cout << "[INFO] Client connected from IP: " << inet_ntoa(address.sin_addr) << " on port: " << ntohs(address.sin_port) << std::endl;
+        std::cout << "[INFO] Client connected from IP: " << inet_ntoa(address.sin_addr) << " on port: " << ntohs(address.sin_port) << std::endl;
 
-    //     while (true) {
-    //         memset(buffer, 0, sizeof(buffer));
-    //         int valread = read(new_socket, buffer, 1024);
-    //         if (valread <= 0) 
-    //         {
-    //             break;
-    //         }
-    //         std::string input(buffer, valread);
-    //         command_parse cmd = parse_command(input);
+        while (true) {
+            memset(buffer, 0, sizeof(buffer));
+            int valread = read(new_socket, buffer, 1024);
+            if (valread <= 0) 
+            {
+                break;
+            }
+            std::string input(buffer, valread);
+            command_parse cmd = parse_command(input);
 
-    //         if (cmd.command == "gpio_write" && gpioMap.find(cmd.args[0]) != gpioMap.end()) 
-    //         {
-    //             uint32_t value;
-    //             std::istringstream(cmd.args[1]) >> std::hex >> value;
-    //             gpioMap[cmd.args[0]]->write_data_reg(value);
-    //         }
-    //         else
-    //         {
-    //             std::string errorMsg = "Unknown command: " + cmd.command + "\n";
-    //             std::cout << errorMsg;
-    //             send(new_socket, errorMsg.c_str(), errorMsg.size(), 0);
-    //         }
-    //     }
+            if (cmd.command == "gpio_write" && gpioMap.find(cmd.args[0]) != gpioMap.end()) 
+            {
+                uint32_t value;
+                std::istringstream(cmd.args[1]) >> std::hex >> value;
+                gpioMap[cmd.args[0]]->write_data_reg(value);
+            }
+            else
+            {
+                std::string errorMsg = "Unknown command: " + cmd.command + "\n";
+                std::cout << errorMsg;
+                send(new_socket, errorMsg.c_str(), errorMsg.size(), 0);
+            }
+        }
 
-    //     std::cout << "[INFO] Client disconnected." << std::endl;
-    //     close(new_socket);
-    // }
+        std::cout << "[INFO] Client disconnected." << std::endl;
+        close(new_socket);
+    }
 
     close(devmem);
+
+#endif
+
+#ifdef X68_64
+    print_banner();
+    std::cout << "[INFO] x68_64 TEST ENVIRONMENT ENABLED\n";
+
+    // left frame
+    char frame_buffer_l[FRAME_WIDTH * FRAME_HEIGHT];
+    char frame_blocks_l[FRAME_HEIGHT / BLOCK_SIZE][FRAME_WIDTH / BLOCK_SIZE * BLOCK_SIZE * BLOCK_SIZE];
+    hw_ov7670_src_ns::read_frame("../python-model/hex/tsukaba_l.hex", frame_buffer_l);
+    hw_ov7670_src_ns::partition_into_blocks(frame_buffer_l, frame_blocks_l);
+
+    // right frame
+    char frame_buffer_r[FRAME_WIDTH * FRAME_HEIGHT];
+    char frame_blocks_r[FRAME_HEIGHT / BLOCK_SIZE][FRAME_WIDTH / BLOCK_SIZE * BLOCK_SIZE * BLOCK_SIZE];
+    hw_ov7670_src_ns::read_frame("../python-model/hex/tsukaba_r.hex", frame_buffer_r);
+    hw_ov7670_src_ns::partition_into_blocks(frame_buffer_r, frame_blocks_r);
+
+
+#endif
+
     return 0;
 }
 

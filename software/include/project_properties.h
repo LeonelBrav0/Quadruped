@@ -4,6 +4,13 @@
 #define PROJECT_VERSION_MINOR 0
 #define AUTHOR "Marc Francis Leonel Bravo"
 
+// Frame properties
+#define FRAME_WIDTH     480
+#define FRAME_HEIGHT    640
+
+// Depth estimation
+#define BLOCK_SIZE  16
+
 
 
 // AXI GPIO

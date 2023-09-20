@@ -19,5 +19,6 @@
 *hardware/fpga/deploy/build/Project_Q/*
 
 *software/build/*
+*software/python-model/datasets/*
 
 test*

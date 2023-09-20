@@ -37,8 +37,8 @@
         "m07_couplers": {},
         "m08_couplers": {}
       },
-      "axil_reg_wrapper_0": "",
-      "blk_mem_gen_0": ""
+      "blk_mem_gen_0": "",
+      "axil_reg_wrapper_0": ""
     },
     "interface_ports": {
       "pmod1_io": {
@@ -2967,6 +2967,12 @@
           }
         }
       },
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "Project_Q_blk_mem_gen_0_1",
+        "xci_path": "ip/Project_Q_blk_mem_gen_0_1/Project_Q_blk_mem_gen_0_1.xci",
+        "inst_hier_path": "blk_mem_gen_0"
+      },
       "axil_reg_wrapper_0": {
         "vlnv": "xilinx.com:module_ref:axil_reg_wrapper:1.0",
         "xci_name": "Project_Q_axil_reg_wrapper_0_0",
@@ -3183,12 +3189,6 @@
             }
           }
         }
-      },
-      "blk_mem_gen_0": {
-        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "xci_name": "Project_Q_blk_mem_gen_0_1",
-        "xci_path": "ip/Project_Q_blk_mem_gen_0_1/Project_Q_blk_mem_gen_0_1.xci",
-        "inst_hier_path": "blk_mem_gen_0"
       }
     },
     "interface_nets": {
@@ -3331,8 +3331,8 @@
           "ps8_0_axi_periph/M04_ACLK",
           "ps8_0_axi_periph/M07_ACLK",
           "CLOCK_25MHz",
-          "axil_reg_wrapper_0/s_axi_aclk",
-          "ps8_0_axi_periph/M08_ACLK"
+          "ps8_0_axi_periph/M08_ACLK",
+          "axil_reg_wrapper_0/s_axi_aclk"
         ]
       },
       "proc_sys_reset_0_peripheral_aresetn": {
@@ -3365,8 +3365,8 @@
           "axi_iic_0/s_axi_aresetn",
           "ps8_0_axi_periph/M04_ARESETN",
           "ps8_0_axi_periph/M07_ARESETN",
-          "axil_reg_wrapper_0/s_axi_aresetn",
-          "ps8_0_axi_periph/M08_ARESETN"
+          "ps8_0_axi_periph/M08_ARESETN",
+          "axil_reg_wrapper_0/s_axi_aresetn"
         ]
       },
       "xlslice_0_Dout": {
