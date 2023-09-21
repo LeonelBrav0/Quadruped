@@ -38,6 +38,7 @@ set(SRC
     src/command_parser.cpp
     src/axi_iic.cpp
     src/hw_ov7670_src.cpp
+    src/mat8b.c
 )
 
 add_executable(${PROJECT_NAME} ${SRC})

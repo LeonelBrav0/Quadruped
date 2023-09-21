@@ -28,6 +28,7 @@
 
 // CModel
 #include "hw_ov7670_src.h"
+#include "mat8b.h"
 
 void print_banner()
 {
@@ -139,17 +140,19 @@ int main()
     print_banner();
     std::cout << "[INFO] x68_64 TEST ENVIRONMENT ENABLED\n";
 
-    // left frame
-    char frame_buffer_l[FRAME_WIDTH * FRAME_HEIGHT];
-    char frame_blocks_l[FRAME_HEIGHT / BLOCK_SIZE][FRAME_WIDTH / BLOCK_SIZE * BLOCK_SIZE * BLOCK_SIZE];
-    hw_ov7670_src_ns::read_frame("../python-model/hex/tsukaba_l.hex", frame_buffer_l);
-    hw_ov7670_src_ns::partition_into_blocks(frame_buffer_l, frame_blocks_l);
+    // // left frame
+    // char frame_buffer_l[FRAME_WIDTH * FRAME_HEIGHT];
+    // char frame_blocks_l[FRAME_HEIGHT / BLOCK_SIZE][FRAME_WIDTH / BLOCK_SIZE * BLOCK_SIZE * BLOCK_SIZE];
+    // hw_ov7670_src_ns::read_frame("../python-model/hex/tsukaba_l.hex", frame_buffer_l);
+    // hw_ov7670_src_ns::partition_into_blocks(frame_buffer_l, frame_blocks_l);
 
-    // right frame
-    char frame_buffer_r[FRAME_WIDTH * FRAME_HEIGHT];
-    char frame_blocks_r[FRAME_HEIGHT / BLOCK_SIZE][FRAME_WIDTH / BLOCK_SIZE * BLOCK_SIZE * BLOCK_SIZE];
-    hw_ov7670_src_ns::read_frame("../python-model/hex/tsukaba_r.hex", frame_buffer_r);
-    hw_ov7670_src_ns::partition_into_blocks(frame_buffer_r, frame_blocks_r);
+    // // right frame
+    // char frame_buffer_r[FRAME_WIDTH * FRAME_HEIGHT];
+    // char frame_blocks_r[FRAME_HEIGHT / BLOCK_SIZE][FRAME_WIDTH / BLOCK_SIZE * BLOCK_SIZE * BLOCK_SIZE];
+    // hw_ov7670_src_ns::read_frame("../python-model/hex/tsukaba_r.hex", frame_buffer_r);
+    // hw_ov7670_src_ns::partition_into_blocks(frame_buffer_r, frame_blocks_r);
+
+    mat8b* m1 = mat8b_hexload(480, 640, "../python-model/hex/tsukaba_l.hex");
 
 
 #endif
